@@ -1,0 +1,19 @@
+ string reverseWords(string S) 
+    { 
+      istringstream iss(S);
+      vector<string>tokens;
+      string token;
+      while(getline(iss,token,'.')){
+          if(!token.empty()){
+              tokens.push_back(token);
+          }
+      }
+      for(int i=tokens.size()-1; i>=0;i--){
+          if(i>0){
+             cout<<tokens[i]+"."; 
+          }
+          else{
+              cout<<tokens[i];
+          }
+      }
+    }
