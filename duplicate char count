@@ -1,0 +1,20 @@
+#include <bits/stdc++.h> 
+vector<pair<char,int>> duplicate_char(string s, int n){
+    
+    map<char,int>mp;
+    for(auto i:s){
+        mp[i]++;
+    }
+    vector<pair<char,int>>ans;
+    for(auto i:mp){
+        if(i.second>=2){
+            pair<char,int>p;
+            p.first=i.first;
+            p.second=i.second;
+            ans.push_back(p);
+        }
+    }
+    return ans;
+
+    
+}
